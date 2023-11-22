@@ -1,0 +1,18 @@
+/* fonts */
+@font-face {
+  font-family: 'jetbrains_mono';
+  src: url('../fonts/JetBrainsMono-VariableFont_wght.ttf');
+}
+
+/* general styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body styles */
+body {
+  font-family: 'jetbrains_mono';
+  font-weight: 400;
+}
