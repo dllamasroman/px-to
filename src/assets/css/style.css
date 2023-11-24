@@ -11,8 +11,41 @@
   box-sizing: border-box;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
+.box-shadow {
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
+}
+
 /* body styles */
 body {
   font-family: 'jetbrains_mono';
   font-weight: 400;
+  background-color: #19191a;
+}
+
+/* header */
+header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  background-color: #373739;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 3rem;
+  padding: 1rem 2rem;
+  color: #ecdda2;
+}
+
+/* main content */
+main {
+  display: grid;
+  place-items: center;
 }
