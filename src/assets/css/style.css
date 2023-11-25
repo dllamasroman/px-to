@@ -19,11 +19,17 @@
   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
 }
 
+.max-width {
+  max-width: 48rem;
+  margin: auto;
+}
+
 /* body styles */
 body {
   font-family: 'jetbrains_mono';
   font-weight: 400;
   background-color: #19191a;
+  margin: auto;
 }
 
 /* header */
@@ -35,6 +41,8 @@ header {
   display: grid;
   place-items: center;
   background-color: #373739;
+  width: 100%;
+  max-width: 100%;
 }
 
 h1 {
@@ -48,4 +56,33 @@ h1 {
 main {
   display: grid;
   place-items: center;
+}
+
+/* footer */
+footer {
+  padding: 1rem;
+}
+
+footer p {
+  padding-bottom: 1rem;
+  color: #ecdda2;
+  font-weight: 900;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+footer ul {
+  padding: 0rem 1rem 1rem 1rem;
+  list-style: none;
+  display: grid;
+  place-items: center;
+}
+
+footer ul li {
+  margin-bottom: 0.25rem;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #878788;
 }
