@@ -24,6 +24,33 @@
   margin: auto;
 }
 
+.part {
+  display: grid;
+  place-items: center;
+  margin-bottom: 1.5rem;
+}
+
+input[type=text] {
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-weight: 900;
+  color: #19191a;
+  text-align: center;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+label {
+  font-size: 1.5rem;
+  font-weight: 900;
+  padding: 1rem;
+  color: #ecdda2;
+}
+
+
 /* body styles */
 body {
   font-family: 'jetbrains_mono';
@@ -34,8 +61,7 @@ body {
 
 /* header */
 header {
-  position: sticky;
-  position: -webkit-sticky;
+  position: fixed;
   top: 0;
   left: 0;
   display: grid;
@@ -52,10 +78,23 @@ h1 {
   color: #ecdda2;
 }
 
+/* content */
+#content {
+  padding-top: 5.938rem;
+}
+
 /* main content */
 main {
   display: grid;
   place-items: center;
+  height: calc(100vh - 9.7vh)
+}
+
+form {
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+  /* align inputs -> center */
 }
 
 /* footer */
@@ -65,7 +104,7 @@ footer {
 
 footer p {
   padding-bottom: 1rem;
-  color: #ecdda2;
+  color: #aaaaaa;
   font-weight: 900;
   font-size: 1.1rem;
   text-align: center;
@@ -79,10 +118,27 @@ footer ul {
 }
 
 footer ul li {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 footer ul li a {
   text-decoration: none;
   color: #878788;
+  transition: color 0.2s;
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -ms-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: font-size 0.2s;
+  -webkit-transition: font-size 0.2s;
+  -moz-transition: font-size 0.2s;
+  -ms-transition: font-size 0.2s;
+  -o-transition: font-size 0.2s;
+  padding: 0.5rem;
+  
+}
+
+footer ul li a:hover {
+  color: #aaaaaa;
+  font-size: 1.1rem;
 }
