@@ -11,7 +11,7 @@ const pxInput = document.getElementById("px");
 pxInput.addEventListener("input", function (event) {
   pxValue = event.target.value;
   calc();
-  updatePxInputValue();
+  remInput.value = pxToRem || ""; // "" --> to show the input empty, when the user have deleted the other input value
 });
 
 // rem input
@@ -20,7 +20,7 @@ const remInput = document.getElementById("rem");
 remInput.addEventListener("input", function (event) {
   remValue = event.target.value;
   calc();
-  updateRemInputValue();
+  pxInput.value = remToPx || ""; // "" --> to show the input empty, when the user have deleted the other input value
 });
 
 /**
@@ -39,16 +39,3 @@ function calc() {
     remToPx = remValue * 16; // px value
   }
 }
-
-// update inputs values
-function updatePxInputValue() {
-  pxInput.value = remToPx;
-}
-
-function updateRemInputValue() {
-  remInput.value = pxToRem;
-}
-
-//! improve the update[...]InputValue system, hence when you enter a value in pxInput (for example), change it value too
-
-//! Spanish (ES) -> mejorar el sistema update[...]InputValue, ya que cuando introduces un valor en pxInput (por ejemplo), también cambia el valor de dicho campo
