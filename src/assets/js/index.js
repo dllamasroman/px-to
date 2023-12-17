@@ -18,7 +18,7 @@ pxInput.addEventListener("input", function (event) {
   } // X1
 
   calc();
-  remInput.value = isDecimal(pxValue) ? pxToRem : "";
+  remInput.value = pxToRem || "";
 });
 
 // rem input
@@ -34,7 +34,7 @@ remInput.addEventListener("input", function (event) {
   } // X1
 
   calc();
-  pxInput.value = isDecimal(remValue) ? remToPx : "";
+  pxInput.value = remToPx || "";
 });
 
 /**
@@ -48,12 +48,8 @@ remInput.addEventListener("input", function (event) {
  * - 16 px --> 1 rem
  */
 function calc() {
-  pxToRem = (pxValue / 16).toFixed(3); // rem value
-  remToPx = (remValue * 16).toFixed(3); // px value
-}
-
-function isDecimal(value) {
-  return value.includes(".");
+  pxToRem = pxValue / 16; // rem value
+  remToPx = remValue * 16; // px value
 }
 
 /**
