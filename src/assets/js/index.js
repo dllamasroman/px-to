@@ -18,7 +18,7 @@ pxInput.addEventListener("input", function (event) {
   } // X1
 
   calc();
-  remInput.value = pxToRem || "";
+  remInput.value = pxToRem.replace(/\.?0+$/, ""); // with that RegExp, when remToPx = 'number.000', '.000' will be removed
 });
 
 // rem input
@@ -34,7 +34,7 @@ remInput.addEventListener("input", function (event) {
   } // X1
 
   calc();
-  pxInput.value = remToPx || "";
+  pxInput.value = remToPx.replace(/\.?0+$/, ""); // with that RegExp, when remToPx = 'number.000', '.000' will be removed
 });
 
 /**
@@ -48,8 +48,8 @@ remInput.addEventListener("input", function (event) {
  * - 16 px --> 1 rem
  */
 function calc() {
-  pxToRem = pxValue / 16; // rem value
-  remToPx = remValue * 16; // px value
+  pxToRem = (pxValue / 16).toFixed(3); // rem value (toFixed -> 3 decimals)
+  remToPx = (remValue * 16).toFixed(3); // px value (toFixed -> 3 decimals)
 }
 
 /**
@@ -68,5 +68,3 @@ function calc() {
  *
  * - return --> para que se detenga la función en el caso de no ser los valores del input correctos y no continue ejecutando el resto del código que está en el evento
  */
-
-//! ES -> NO SE MUESTRA NADA EN EL INPUT SI EL NUMERO ES ENTERO
