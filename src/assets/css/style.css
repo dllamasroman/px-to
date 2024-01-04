@@ -29,6 +29,23 @@ header {
   background-color: #5C5470;
 }
 
+header a {
+  text-decoration: none;
+  transition: transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  -moz-transition: transform 0.2s;
+  -ms-transition: transform 0.2s;
+  -o-transition: transform 0.2s;
+}
+
+header a:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
 header h1 {
   padding: 1rem;
   font-weight: 900;
@@ -40,9 +57,13 @@ header h1 {
 
 main {
   padding: 1rem;
+  margin-top: 2rem;
+}
+
+main .sect {
   display: grid;
   place-items: center;
-  margin-top: 2rem;
+  margin-bottom: 3.125rem;
 }
 
 form {
@@ -75,11 +96,15 @@ form input[type=text] {
   -ms-border-radius: 0.75rem;
   -o-border-radius: 0.75rem;
   padding: 1rem;
-  border: 0;
+  border: none;
   text-align: center;
   font-size: 1.15rem;
   background-color: #B9B4C7;
   color: #090417;
+}
+
+form input[type=text]:focus {
+  outline-color: #B9B4C7;
 }
 
 form label {
@@ -88,6 +113,21 @@ form label {
   font-weight: 900;
   font-size: 1.25rem;
   color: #090417;
+}
+
+.advice {
+  background-color: rgba(255, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.advice-text {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 1rem;
 }
 
 footer {
